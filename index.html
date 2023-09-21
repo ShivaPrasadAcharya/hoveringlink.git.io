@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Hover Link Example</title>
+    <style>
+        /* Base styles for the link */
+        .hover-link {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        /* Styles for the link on hover */
+        .hover-link:hover {
+            color: #ff4500; /* Change link color on hover */
+        }
+
+        /* Styles for the hidden content */
+        .hover-content {
+            display: none;
+            background-color: #f0f0f0;
+            padding: 2px; /* Increase padding for more space */
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            margin-left: 5px; /* Add some space between link and content */
+            transition: opacity 0.3s; /* Smooth fade-in effect */
+            opacity: 0; /* Initially, hidden content is transparent */
+            font-size: 14px; /* Set the font size for the hidden content */
+            width:300px
+        }
+
+        /* Show the hidden content when hovering over the link */
+        .hover-link:hover + .hover-content {
+            display: table-caption;
+            opacity: 1; /* Fade in when hovering over the link */
+        }
+    </style>
+</head>
+<body>
+    <p>Hover over the <a href="#" class="hover-link">link. </a><span class="hover-content"> to see the hidden content. What happens if the text is too long to handle with. Is there any other way to make it more</span>But don't hide the line content.</p>
+</body>
+</html>
